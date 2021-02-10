@@ -97,7 +97,7 @@
 # b = 4
 # c = 3
 
-# a = (float(input('a: ')))   # we need to conver inputed text from string to number(float)
+# a = (float(input('a: ')))   # we need to convert inputed text from string to number(float)
 # b = (float(input('b: ')))
 # c = (float(input('c: ')))
 #
@@ -109,14 +109,21 @@
 #
 # print(triangle_area)
 
-a, b, c = input(' input all three sides:').split(' ') #split can be used only with one input , you cannot use float additionally
-print(a)
-print(b)
-print(c)
+# a, b, c = input(' input all three sides:').split(' ') #split can be used only with one input , you cannot use float additionally
+# print(a)
+# print(b)
+# print(c)
+#
+# P = (float(a) + float(b) + float(c)) / 2 # if I would have used // the answer would be 6 , not 6.0
+# print(P)
+#
+# triangle_area = (P * (P -float(a)) * (P - float(b)) * (P - float(c))) ** 0.5
 
-P = (float(a) + float(b) + float(c)) / 2 # if I would have used // the answer would be 6 , not 6.0
-print(P)
+a, b ,c , d = input('Please input four sides of the house: ').split(',')
+print('A side is:' + a)
+print('B side is:' + b)
+print('C side is:' + c)
+print('D side is:' + d)
 
-triangle_area = (P * (P -float(a)) * (P - float(b)) * (P - float(c))) ** 0.5
-
-
+P = (float(a) + float(b) + float(c) + float(d))
+print("Sum of all sides of the house are: ", (P))
