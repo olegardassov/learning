@@ -30,7 +30,7 @@ while condition:
                 birth_year = user_id[1:3]
                 birth_month = user_id[3:5]
                 birth_day = user_id[5:7]
-                birth_region = user_id[7:10]   # we can also make it birth_region = user_id[7:10] , in that case we do not need to use if int(birth_range) in range(), we can use if birth_range in range()
+                birth_region = user_id[7:10]   # we can also make it birth_region = int(user_id[7:10]) , in that case we do not need to use if int(birth_range) in range(), we can use if birth_range in range()
                 check_num = user_id[10]
 
                 # IF statement to check gender and century of birth

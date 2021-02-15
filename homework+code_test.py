@@ -8,7 +8,9 @@ elif menu == "0":
 #ID code verification
 elif menu == "2":
     id_code = input("Please input your ID_code here: ")
-    control = 1 * int(id_code[0]) + 2 * int(id_code[1]) + 3 * int(id_code[2]) + 4 * int(id_code[3]) + 5 * int(id_code[4]) + 6 * int(id_code[5]) + 7 * int(id_code[6]) + 8 * int(id_code[7]) + 9 * int(id_code[8]) + 1 * int(id_code[9])
+    control = 1 * int(id_code[0]) + 2 * int(id_code[1]) + 3 * int(id_code[2]) + 4 * int(id_code[3]) + 5 * int(id_code[4])\
+              + 6 * int(id_code[5]) + 7 * int(id_code[6]) + 8 * int(id_code[7])\
+              + 9 * int(id_code[8]) + 1 * int(id_code[9])
     # print(control)
     check = control % 11
     # print(check)
