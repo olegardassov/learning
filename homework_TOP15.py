@@ -2,6 +2,7 @@ import pandas as pd
 df = pd.read_csv("2019.csv", header=1)
 pd.set_option("display.max_columns", 10)
 
+
 try:
     user_choice = input(
         "Please choose Column to use as a filter: \n1. Score \n2. GDP per capita \n3. Social support \n4. Healthy life expectancy \n5. Freedom to make life choices \n6. Generosity \n7. Perceptions of corruption \n-->: ")
@@ -23,21 +24,30 @@ except ValueError:
 print(filter)
 x = int(top)
 if user_choice == '1':
-    print(df.sort_values(by=["Score"], ascending=y).head(x))
+    new = df.sort_values(by=["Score"], ascending=y).head(x)
+    print(df.sort_values(by=["Score"], ascending=y).head(x)), new.to_csv("result.csv", index=True) # saves output to "result.csv" file
 elif user_choice == '2':
-    print(df.sort_values(by=["GDP per capita"], ascending=y).head(x))
+    new = df.sort_values(by=["GDP per capita"], ascending=y).head(x)
+    print(df.sort_values(by=["GDP per capita"], ascending=y).head(x)), new.to_csv("result.csv")
 elif user_choice == '3':
-    print(df.sort_values(by=["Social support"], ascending=y).head(x))
+    new = df.sort_values(by=["Social support"], ascending=y).head(x)
+    print(df.sort_values(by=["Social support"], ascending=y).head(x)), new.to_csv("result.csv")
 elif user_choice == '4':
-    print(df.sort_values(by=["Healthy life expectancy"], ascending=y).head(x))
+    new = df.sort_values(by=["Healthy life expectancy"], ascending=y).head(x)
+    print(df.sort_values(by=["Healthy life expectancy"], ascending=y).head(x)), new.to_csv("result.csv")
 elif user_choice == '5':
-    print(df.sort_values(by=['Freedom to make life choices'], ascending=y).head(x))
+    new = df.sort_values(by=['Freedom to make life choices'], ascending=y).head(x)
+    print(df.sort_values(by=['Freedom to make life choices'], ascending=y).head(x)), new.to_csv("result.csv")
 elif user_choice == '6':
-    print(df.sort_values(by=["Generosity"], ascending=y).head(x))
+    new = df.sort_values(by=["Generosity"], ascending=y).head(x)
+    print(df.sort_values(by=["Generosity"], ascending=y).head(x)), new.to_csv("result.csv")
 elif user_choice == '7':
-    print(df.sort_values(by=["Perceptions of corruption"], ascending=y).head(x))
+    new = df.sort_values(by=["Perceptions of corruption"], ascending=y).head(x)
+    print(df.sort_values(by=["Perceptions of corruption"], ascending=y).head(x)), new.to_csv("result.csv")
 else:
     print("Oops, something went wrong")
+
+
 
 
     # print(df.iloc[[0, 1 ,2 ,3], [0, 1, 2]])
