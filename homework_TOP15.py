@@ -1,7 +1,6 @@
 import pandas as pd
 df = pd.read_csv("2019.csv", header=1)
-pd.set_option("display.max_columns", 9)
-
+pd.set_option("display.max_columns", 10)
 
 try:
     user_choice = input(
@@ -22,7 +21,7 @@ except ValueError:
     quit('Program has stopped')
 # y = bool(filter)
 print(filter)
-x = int(top) + 1
+x = int(top)
 if user_choice == '1':
     print(df.sort_values(by=["Score"], ascending=y).head(x))
 elif user_choice == '2':
