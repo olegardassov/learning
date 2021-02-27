@@ -1,7 +1,7 @@
 
 x = int(5)
 print(x)
-pr
+
 # def id_check(id_code, chk_list):
 #     counter = 0
 #     result = 0

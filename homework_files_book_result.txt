@@ -1,0 +1,2 @@
+There are 16656 words in text file.
+There are 4874 unique words in text file.
