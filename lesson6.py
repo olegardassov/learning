@@ -6,7 +6,7 @@ print(x)
 #     counter = 0
 #     result = 0
 #     for num in chk_list:
-#         result += int(id_cide[counter] * num)
+#         result += int(id_code[counter] * num)
 #         counter += 1
 #     return result % 11
 #
