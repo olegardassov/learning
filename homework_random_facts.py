@@ -7,12 +7,12 @@ def user_choice():
     try:
         user_input = input("Please choose:\n1. Random facts\n2. Exit\n-->")
         if user_input == "1":
-            print(random_facts())
+            random_facts()
             try:
                 while state == True:
-                    user_input2 = input("Please choose:\n1. For next Random fact\n2. Exit\n-->")
+                    user_input2 = input("\nPlease choose:\n1. For next Random fact\n2. Exit\n-->")
                     if user_input2 == '1':
-                        print(random_facts())
+                        random_facts()
                     elif user_input2 == '2':
                         state == False
                         print('Exit')
