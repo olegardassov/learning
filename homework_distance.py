@@ -1,10 +1,10 @@
 import math
 
 def max_height():
-    v0, a, g = input(
-        "Please input starting speed, angle and acceleration using coma between parameters \nExample: 1.5,2.7,3.5 or 1,2.5,3 for round numbers. \n-->").split(
-        ",")
     try:
+        v0, a, g = input(
+            "Please input starting speed, angle and acceleration using coma between parameters \nExample: 1.5,2.7,3.5 or 1,2.5,3 for round numbers. \n-->").split(
+            ",")
         (v0) == float(v0)
         (a) == float(a)
         (g) == float(g)
