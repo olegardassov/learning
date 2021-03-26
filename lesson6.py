@@ -1,68 +1,68 @@
 
-x = int(5)
-print(x)
+# x = int(5)
+# print(x)
 
-# def id_check(id_code, chk_list):
-#     counter = 0
-#     result = 0
-#     for num in chk_list:
-#         result += int(id_code[counter] * num)
-#         counter += 1
-#     return result % 11
+def id_check(id_code, chk_list):
+    counter = 0
+    result = 0
+    for num in chk_list:
+        result += int(id_code[counter] * num)
+        counter += 1
+    return result % 11
 #
-# id_code = list(input('Please enter your id: '))
-#
-# chk1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1]
-# chk2 = [3, 4, 5, 6, 7, 8, 9, 1, 2, 3]
-#
-#
-# if id_check(id_code, chk1) == 10:
-#     result = id_check(id_code, chk2)
-#     if result == int(id_code[10])
-#         print('ID code is valid')
-#     else:
-#         print("ID code is invalid")
-# elif id_check(id_code, chk1) == int(id_code[10]):
-#     print('ID code is valid')
-#
-#
-#
-# #______________________________________________________________________________
-#
+id_code = list(input('Please enter your id: '))
+
+chk1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1]
+chk2 = [3, 4, 5, 6, 7, 8, 9, 1, 2, 3]
+
+
+if id_check(id_code, chk1) == 10:
+    result = id_check(id_code, chk2)
+    if result == int(id_code[10]):
+        print('ID code is valid')
+    else:
+        print("ID code is invalid")
+elif id_check(id_code, chk1) == int(id_code[10]):
+    print('ID code is valid')
+
+
+
+#______________________________________________________________________________
+
 # print(id_check(id_code, chk1))
 
 
-# id_code = input('Please enter your ID code: ')
-# chk1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1]
-# chk2 = [3, 4, 5, 6, 7, 8, 9 ,1, 2, 3]
-# id_code_list = list(id_code)    # to convert string on int,float to list
-# # print(id_code_list)
-#
-# counter = 0
-# result = 0
-# for num in chk1:
-#     result = result + chk1[counter] * int(id_code_list[counter])   #   0 + 1 * 3 = 3 + 2 * 9 = 21 + 3 * 0 = 21 + 4 * 0 = 21 + 5 * 5 = 46 and so on
-#     counter += 1
-# # print(result)
-# check_num = result % 11
-#
-# if check_num == int(id_code[-1]):
-#     print('ID code is valid')
-# elif check_num == 10:
-#     counter = 0  # because counter is 10 from the last for cycle
-#     result = 0  # because result is sum (86) from the last for cycle
-#     for num in chk2:
-#         result = result + chk2[counter] * int(id_code_list[counter])  # 0 + 1 * 3 = 3 + 2 * 9 = 21 + 3 * 0 = 21 + 4 * 0 = 21 + 5 * 5 = 46 and so on
-#         counter += 1
-#     check_num = result % 11
-#     if check_num == int(id_code[-1]):
-#         print("ID code is valid")
-#     elif check_num >= 10:
-#         check_num = 0
-#     else:
-#         print('ID code is invalid')
-# else:
-#     print('ID code is invalid')
+id_code = input('Please enter your ID code: ')
+chk1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1]
+chk2 = [3, 4, 5, 6, 7, 8, 9 ,1, 2, 3]
+id_code_list = list(id_code)    # to convert string on int,float to list
+# print(id_code_list)
+
+counter = 0
+result = 0
+for num in chk1:
+    result = result + chk1[counter] * int(id_code_list[counter])   #   0 + 1 * 3 = 3 + 2 * 9 = 21 + 3 * 0 = 21 + 4 * 0 = 21 + 5 * 5 = 46 and so on
+    counter += 1
+# print(result)
+check_num = result % 11
+
+if check_num == int(id_code[-1]):
+    print('ID code is valid')
+elif check_num == 10:
+    counter = 0  # because counter is 10 from the last for cycle
+    result = 0  # because result is sum (86) from the last for cycle
+    for num in chk2:
+        result = result + chk2[counter] * int(id_code_list[counter])  # 0 + 1 * 3 = 3 + 2 * 9 = 21 + 3 * 0 = 21 + 4 * 0 = 21 + 5 * 5 = 46 and so on
+        counter += 1
+    check_num = result % 11
+    if check_num == int(id_code[-1]):
+        print("ID code is valid")
+    elif check_num >= 10:
+        check_num = 0
+    else:
+        print('ID code is invalid')
+else:
+    print('ID code is invalid')
 
 
 #____________ FUNCTIONS  # functions are always written in the beginning of the program

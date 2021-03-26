@@ -3,7 +3,7 @@
 import csv
 
 data_list = []
-with open("2019.csv", "r") as csv_file:
+with open("../2019.csv", "r") as csv_file:
     csv_reader = csv.DictReader(csv_file, delimiter=",", lineterminator="\n")
     next(csv_file)
     csv_reader = csv.DictReader(csv_file)

@@ -3,6 +3,20 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="\Homeworks\homework_id_interface.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Homeworks\homework_id_interface_validation.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\homework_TOP15.py">
           <value>
             <Attribute>
@@ -17,7 +31,28 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\homework_parser\homework_parser.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\lesson14_request.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\lesson15_regular_expressions.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\lesson16_additional_methods_and_libraries.py">
           <value>
             <Attribute>
               <option name="separator" value="," />

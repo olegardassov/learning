@@ -1,5 +1,5 @@
 import pandas as pd
-df = pd.read_csv("2019.csv", header=1)
+df = pd.read_csv("../2019.csv", header=1)
 pd.set_option("display.max_columns", 10)
 pd.set_option("display.max_rows", 160)
 
