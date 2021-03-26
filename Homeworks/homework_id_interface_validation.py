@@ -10,9 +10,9 @@
 # P.S.
 # Поле для ввода и чекбокс должны быть подписаны.
 # Задание со звёздочкой не обязательно.
-import id_code_def
+
 from tkinter import *   # imports all functions from tkinter
-import time
+
 
 root = Tk() # creates program window
 root.geometry('1150x820')
