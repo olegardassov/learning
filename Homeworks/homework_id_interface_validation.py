@@ -35,9 +35,7 @@ def Check():
         check_num = result % 11
 
         if check_num == int(id_code[-1]):
-            print('ID code is valid')
-            myLabel = Label(root, text="ID code is valid")
-            myLabel.pack()
+            valid = 'ID code is valid'
         elif check_num == 10:
             counter = 0  # because counter is 10 from the last for cycle
             result = 0  # because result is sum (86) from the last for cycle
@@ -47,20 +45,16 @@ def Check():
                 counter += 1
             check_num = result % 11
             if check_num == int(id_code[-1]):
-                print("ID code is valid")
-                myLabel = Label(root, text="ID code is valid")
-                myLabel.pack()
+                valid = "ID code is valid"
+                print(check_num)
+
 
             elif check_num >= 10:
                 check_num = 0
             else:
-                print('ID code is invalid')
-                myLabel = Label(root, text='ID code is invalid')
-                myLabel.pack()
+                valid ='ID code is invalid'
         else:
-            print('ID code is invalid')
-            myLabel = Label(root, text="ID code is invalid")
-            myLabel.pack()
+            valid ="ID code is invalid"
 
         user_id = user_entry.get()
         print(user_id)
@@ -69,21 +63,17 @@ def Check():
             # Check if ID code length is 11 symbols:
             if len(user_id) != 11:
                 if len(user_id) > 11:
-                    print('ID code is too long')
-                    myLabel = Label(root, text='ID code is too long')
-                    myLabel.pack()
+                    output = 'ID code is too long'
                 elif len(user_id) < 11:
-                    print('ID code is too short')
-                    myLabel = Label(root, text='ID code is too short')
-                    myLabel.pack()
+                    output = 'ID code is too short'
                     # pass     # , if I use pass, program will skip it and go on with program
                 raise UserWarning
             else:
                 condition2 = False
         except:
             print('ERROR')
-            myLabel = Label(root, text='ERROR')
-            myLabel.pack()
+            output_str = output + '\nERROR'
+            print_output.set(output_str)
 
         else:
 
@@ -119,23 +109,46 @@ def Check():
                 gender = 'unknown'
                 birth_cent = 'unknown'
 
-            if int(birth_region) in range(1, 11):  # in range last number does not count like in index
-                region = 'Kuresaare haigla'
-            elif int(birth_region) in range(11, 20):  # in range last number does not count like in index
+            if int(birth_region) in range(1, 11):
+                region = 'Kuressaare haigla'
+            elif int(birth_region) in range(11, 20):
                 region = 'Tartu Ülikooli Naistekliinik'
-            elif int(birth_region) in range(21, 151):  # in range last number does not count like in index
-                region = 'Tallinn'
+            elif int(birth_region) in range(21, 151):
+                region = 'Ida-Tallinna keskhaigla, Pelgulinna sünnitusmaja (Tallinn)'
+            elif int(birth_region) in range(151, 161):
+                region = 'Keila haigla'
+            elif int(birth_region) in range(161, 221):
+                region = 'Rapla haigla, Loksa haigla, Hiiumaa haigla (Kärdla)'
+            elif int(birth_region) in range(221, 271):
+                region = 'Ida-Viru keskhaigla (Kohtla-Järve, endine Jõhvi)'
+            elif int(birth_region) in range(271, 371):
+                region = 'Maarjamõisa kliinikum (Tartu), Jõgeva haigla'
+            elif int(birth_region) in range(371, 421):
+                region = 'Narva haigla'
+            elif int(birth_region) in range(421, 471):
+                region = 'Pärnu haigla'
+            elif int(birth_region) in range(471, 491):
+                region = 'Haapsalu haigla'
+            elif int(birth_region) in range(491, 521):
+                region = 'Järvamaa haigla (Paide)'
+            elif int(birth_region) in range(521, 571):
+                region = 'Rakvere haigla, Tapa haigla'
+            elif int(birth_region) in range(571, 601):
+                region = 'Valga haigla'
+            elif int(birth_region) in range(601, 651):
+                region = 'Viljandi haigla'
+            elif int(birth_region) in range(651, 701):
+                region = 'Lõuna-Eesti haigla (Võru), Põlva haigla'
             else:
-                region = 'unknown'
+                region = 'Unknown'
 
             print('Your national id is: ' + user_id)
             print('You are ' + gender)
             print('Your date of birth is ' + birth_day + '.' + birth_month + '.' + birth_cent + birth_year)
             print('You were born in ' + region)
 
-            output = 'You are ' + gender + '\nYour date of birth is ' + birth_day + '.' + birth_month + '.' + birth_cent + birth_year + '\nYou were born in ' + region + '\nValidation Successful'
-            myLabel = Label(root, text=output)
-            myLabel.pack()
+            output_str = valid + '\nYou are ' + gender + '\nYour date of birth is ' + birth_day + '.' + birth_month + '.' + birth_cent + birth_year + '\nYou were born in ' + region + '\nYour check number is: ' + check_num + '\nValidation Successful'
+            print_output.set(output_str)
 
     else:
         user_id = user_entry.get()
@@ -145,21 +158,17 @@ def Check():
             # Check if ID code length is 11 symbols:
             if len(user_id) != 11:
                 if len(user_id) > 11:
-                    print()
-                    myLabel = Label(root, text='ID code is too long')
-                    myLabel.pack()
+                    output = 'ID code is too long'
                 elif len(user_id) < 11:
-                    print('ID code is too short')
-                    myLabel = Label(root, text='ID code is too short')
-                    myLabel.pack()
+                    output = 'ID code is too short'
                     # pass     # , if I use pass, program will skip it and go on with program
                 raise UserWarning
             else:
                 condition2 = False
         except:
             print('ERROR')
-            myLabel = Label(root, text='ERROR')
-            myLabel.pack()
+            output_str = output + '\nERROR'
+            print_output.set(output_str)
 
         else:
 
@@ -195,22 +204,50 @@ def Check():
                 gender = 'unknown'
                 birth_cent = 'unknown'
 
-            if int(birth_region) in range(1, 11):  # in range last number does not count like in index
-                region = 'Kuresaare haigla'
-            elif int(birth_region) in range(11, 20):  # in range last number does not count like in index
+            if int(birth_region) in range(1, 11):
+                region = 'Kuressaare haigla'
+            elif int(birth_region) in range(11, 20):
                 region = 'Tartu Ülikooli Naistekliinik'
-            elif int(birth_region) in range(21, 151):  # in range last number does not count like in index
-                region = 'Tallinn'
+            elif int(birth_region) in range(21, 151):
+                region = 'Ida-Tallinna keskhaigla, Pelgulinna sünnitusmaja (Tallinn)'
+            elif int(birth_region) in range(151, 161):
+                region = 'Keila haigla'
+            elif int(birth_region) in range(161, 221):
+                region = 'Rapla haigla, Loksa haigla, Hiiumaa haigla (Kärdla)'
+            elif int(birth_region) in range(221, 271):
+                region = 'Ida-Viru keskhaigla (Kohtla-Järve, endine Jõhvi)'
+            elif int(birth_region) in range(271, 371):
+                region = 'Maarjamõisa kliinikum (Tartu), Jõgeva haigla'
+            elif int(birth_region) in range(371, 421):
+                region = 'Narva haigla'
+            elif int(birth_region) in range(421, 471):
+                region = 'Pärnu haigla'
+            elif int(birth_region) in range(471, 491):
+                region = 'Haapsalu haigla'
+            elif int(birth_region) in range(491, 521):
+                region = 'Järvamaa haigla (Paide)'
+            elif int(birth_region) in range(521, 571):
+                region = 'Rakvere haigla, Tapa haigla'
+            elif int(birth_region) in range(571, 601):
+                region = 'Valga haigla'
+            elif int(birth_region) in range(601, 651):
+                region = 'Viljandi haigla'
+            elif int(birth_region) in range(651, 701):
+                region = 'Lõuna-Eesti haigla (Võru), Põlva haigla'
             else:
-                region = 'unknown'
+                region = 'Unknown'
 
             print('Your national id is: ' + user_id)
             print('You are ' + gender)
             print('Your date of birth is ' + birth_day + '.' + birth_month + '.' + birth_cent + birth_year)
             print('You were born in ' + region)
-            output = 'You are ' + gender + '\nYour date of birth is ' + birth_day + '.' + birth_month + '.' + birth_cent + birth_year + '\nYou were born in ' + region
-            myLabel = Label(root, text=output)
-            myLabel.pack()
+            # output = StringVar()
+            output_str = 'You are ' + gender + '\nYour date of birth is ' + birth_day + '.' + birth_month + '.' + birth_cent + birth_year + '\nYou were born in ' + region
+            # mylabel = Label(root, textvariable=output)
+            # mylabel.pack()
+            print_output.set(output_str)
+
+
 
 
 
@@ -237,10 +274,17 @@ mybutton = Button(root, text='Check', padx=60, pady=10, command=Check, fg='black
 mybutton.pack()
 
 
+
+
 image1 = PhotoImage(file='domo.png')    # specifying picture file we want to use
 mylabel = Label(root, image=image1).pack()  #calling image
 # mylabel = Label(root, image=image1).grid(row=100, column=100)  #calling image , does not move the image......
 quit_button = Button(root, text="Exit", padx=60, pady=10,  command=root.quit, fg='black', bg='red')  # quit button, root.quit is built in function
 quit_button.pack()
+
+print_output = StringVar()
+output_label = Label(root, textvariable=print_output)
+output_label.pack()
+
 
 root.mainloop()
